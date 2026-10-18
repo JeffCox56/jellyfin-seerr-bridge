@@ -3,10 +3,10 @@ param(
     [string]$Owner,
 
     [string]$Repo = "jellyfin-plugin-jellyseerr-bridge",
-    [string]$Version = "0.1.0.5",
-    [string]$Tag = "v0.1.5",
-    [string]$ZipPath = "dist/JellyseerrBridge_0.1.0.5.zip",
-    [string]$TargetAbi = "10.11.0.0"
+    [string]$Version = "0.1.0.6",
+    [string]$Tag = "v0.1.6",
+    [string]$ZipPath = "dist/JellyseerrBridge_0.1.0.6.zip",
+    [string]$TargetAbi = "12.2.0.0"
 )
 
 $ErrorActionPreference = "Stop"
@@ -32,7 +32,7 @@ $Manifest = @(
         versions = @(
             @{
                 version = $Version
-                changelog = "Simplifies setup around the standard plugin install plus one web-loader installer command."
+                changelog = "Targets Jellyfin 12.2 with .NET 10."
                 targetAbi = $TargetAbi
                 sourceUrl = $SourceUrl
                 checksum = $Checksum

@@ -95,7 +95,9 @@ It does not forward arbitrary request bodies to Jellyseerr.
 
 ## Build From Source
 
-Install the .NET SDK required by the target Jellyfin version, then:
+This branch targets Jellyfin 12.2 and requires the .NET 10 SDK. Earlier Jellyfin versions require the previous plugin build.
+
+Install the .NET 10 SDK, then:
 
 ```bash
 dotnet restore

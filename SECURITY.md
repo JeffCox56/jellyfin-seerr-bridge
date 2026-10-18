@@ -2,7 +2,7 @@
 
 ## Supported Versions
 
-This preview currently targets Jellyfin 10.11.x.
+This preview currently targets Jellyfin 12.2.
 
 ## API Key Handling
 

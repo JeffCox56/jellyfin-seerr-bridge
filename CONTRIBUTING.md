@@ -2,7 +2,7 @@
 
 ## Development Setup
 
-Install the .NET 9 SDK, then run:
+Install the .NET 10 SDK, then run:
 
 ```bash
 dotnet restore

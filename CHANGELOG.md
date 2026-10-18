@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.0.6
+
+- Target Jellyfin 12.2 packages and .NET 10.
+- Update CI, packaging defaults, and manifest generation to ABI 12.2.0.0.
+- Earlier Jellyfin versions require the 0.1.0.5 build.
+
 ## 0.1.0.5
 
 Simplifies installation around the standard Jellyfin plugin install plus one web-loader installer command.
