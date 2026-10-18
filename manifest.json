@@ -1,34 +1,23 @@
 [
     {
         "name": "Jellyseerr Bridge",
-        "owner": "monjaka",
+        "owner": "JeffCox56",
         "description": "A Jellyfin plugin that provides a Jellyseerr-powered request page with server-side API-key forwarding.",
         "versions": [
             {
-                "url": "https://github.com/monjaka/jellyfin-plugin-jellyseerr-bridge/releases/download/v0.1.6/JellyseerrBridge_0.1.0.6.zip",
+                "url": "https://github.com/JeffCox56/jellyfin-seerr-bridge/releases/download/v0.1.6/JellyseerrBridge_0.1.0.6.zip",
                 "checksum": "34aed94392d689f4bac33a4ba49482b3",
                 "version": "0.1.0.6",
-                "repositoryUrl": "https://raw.githubusercontent.com/monjaka/jellyfin-plugin-jellyseerr-bridge/main/manifest.json",
-                "timestamp": "2026-10-18T08:46:54Z",
-                "sourceUrl": "https://github.com/monjaka/jellyfin-plugin-jellyseerr-bridge/releases/download/v0.1.6/JellyseerrBridge_0.1.0.6.zip",
+                "repositoryUrl": "https://raw.githubusercontent.com/JeffCox56/jellyfin-seerr-bridge/main/manifest.json",
+                "timestamp": "2026-10-18T05:30:00Z",
+                "sourceUrl": "https://github.com/JeffCox56/jellyfin-seerr-bridge",
                 "repositoryName": "Jellyseerr Bridge",
                 "targetAbi": "12.2.0.0",
                 "changelog": "Updates compatibility to Jellyfin 12.2 using .NET 10. Updates build, packaging, and manifest generation for ABI 12.2.0.0."
-            },
-            {
-                "url": "https://github.com/monjaka/jellyfin-plugin-jellyseerr-bridge/releases/download/v0.1.5/JellyseerrBridge_0.1.0.5.zip",
-                "checksum": "eea7309b089ea102e54b31983418d104",
-                "version": "0.1.0.5",
-                "repositoryUrl": "https://raw.githubusercontent.com/monjaka/jellyfin-plugin-jellyseerr-bridge/main/manifest.json",
-                "timestamp": "2026-06-15T04:55:00Z",
-                "sourceUrl": "https://github.com/monjaka/jellyfin-plugin-jellyseerr-bridge/releases/download/v0.1.5/JellyseerrBridge_0.1.0.5.zip",
-                "repositoryName": "Jellyseerr Bridge",
-                "targetAbi": "10.11.0.0",
-                "changelog": "Simplifies setup around the standard plugin install plus one web-loader installer command."
             }
         ],
         "category": "General",
         "overview": "Search, discover, and request media from Jellyseerr inside Jellyfin.",
-        "guid": "d2fcf9c8-c3c7-47e8-9dd6-8de9867e36bb"
+        "guid": "5d0dba6d7ef2be1e902e5d8f5b6a55e7"
     }
 ]
