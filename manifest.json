@@ -5,9 +5,9 @@
         "description": "A Jellyfin plugin that provides a Jellyseerr-powered request page with server-side API-key forwarding.",
         "versions": [
             {
-                "url": "https://github.com/JeffCox56/jellyfin-seerr-bridge/releases/download/v0.1.6/JellyseerrBridge_0.1.0.6.zip",
-                "checksum": "5d0dba6d7ef2be1e902e5d8f5b6a55e7",
-                "version": "0.1.0.6",
+                "url": "https://github.com/JeffCox56/jellyfin-seerr-bridge/releases/download/v0.1.6/JellyseerrBridge_0.1.0.7.zip",
+                "checksum": "6955ff179c3977a9bb51eb466e948bd5",
+                "version": "0.1.0.7",
                 "repositoryUrl": "https://raw.githubusercontent.com/JeffCox56/jellyfin-seerr-bridge/main/manifest.json",
                 "timestamp": "2026-10-18T05:30:00Z",
                 "sourceUrl": "https://github.com/JeffCox56/jellyfin-seerr-bridge",
