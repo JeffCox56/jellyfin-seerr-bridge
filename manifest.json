@@ -6,7 +6,7 @@
         "versions": [
             {
                 "url": "https://github.com/JeffCox56/jellyfin-seerr-bridge/releases/download/v0.1.7/JellyseerrBridge_0.1.0.7.zip",
-                "checksum": "6955ff179c3977a9bb51eb466e948bd5",
+                "checksum": "cb924a35be286390a1a118b42acd6b3b",
                 "version": "0.1.0.7",
                 "repositoryUrl": "https://raw.githubusercontent.com/JeffCox56/jellyfin-seerr-bridge/main/manifest.json",
                 "timestamp": "2026-10-18T05:30:00Z",
