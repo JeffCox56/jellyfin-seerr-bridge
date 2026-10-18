@@ -6,7 +6,7 @@
         "versions": [
             {
                 "url": "https://github.com/JeffCox56/jellyfin-seerr-bridge/releases/download/v0.1.6/JellyseerrBridge_0.1.0.6.zip",
-                "checksum": "34aed94392d689f4bac33a4ba49482b3",
+                "checksum": "5d0dba6d7ef2be1e902e5d8f5b6a55e7",
                 "version": "0.1.0.6",
                 "repositoryUrl": "https://raw.githubusercontent.com/JeffCox56/jellyfin-seerr-bridge/main/manifest.json",
                 "timestamp": "2026-10-18T05:30:00Z",
@@ -18,6 +18,6 @@
         ],
         "category": "General",
         "overview": "Search, discover, and request media from Jellyseerr inside Jellyfin.",
-        "guid": "5d0dba6d7ef2be1e902e5d8f5b6a55e7"
+        "guid": "d2fcf9c8-c3c7-47e8-9dd6-8de9867e36bb"
     }
 ]
