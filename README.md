@@ -1,4 +1,5 @@
 # Seerr Bridge for Jellyfin
+# Seerr Bridge for Jellyfin
 
 A Jellyfin 12.2-compatible fork of [Jellyseerr Bridge](https://github.com/monjaka/jellyfin-plugin-seerr-bridge), originally developed by [monjaka](https://github.com/monjaka).
 
@@ -14,6 +15,13 @@ Seerr Bridge adds a Jellyseerr/Seerr-powered request page directly to Jellyfin w
 
 <img width="1488" height="641" alt="Media request page" src="https://github.com/user-attachments/assets/7ff5b1f4-e7d5-47b2-804d-bf067ac31f5c" />
 
+## Installation
+
+### 1. Add the plugin repository
+
+In Jellyfin, navigate to **Dashboard → Plugins → Repositories**.
+
+Add the following repository:
 ## Installation
 
 ### 1. Add the plugin repository
@@ -51,7 +59,21 @@ Configure:
 The plugin uses a separate web-loader installation step to add the **Request** navigation button to Jellyfin Web.
 
 On the Jellyfin server:
+### 4. Install the Jellyfin Web navigation button
 
+The plugin uses a separate web-loader installation step to add the **Request** navigation button to Jellyfin Web.
+
+On the Jellyfin server:
+
+```bash
+curl -fsSLO https://raw.githubusercontent.com/JeffCox56/jellyfin-seerr-bridge/main/scripts/install-web-loader.sh
+
+# Review the downloaded script before running it
+less install-web-loader.sh
+
+sudo bash install-web-loader.sh
+sudo systemctl restart jellyfin
+```
 ```bash
 curl -fsSLO https://raw.githubusercontent.com/JeffCox56/jellyfin-seerr-bridge/main/scripts/install-web-loader.sh
 
@@ -65,7 +87,11 @@ sudo systemctl restart jellyfin
 These commands assume Jellyfin is installed as a systemd service and the installer supports your Jellyfin Web layout.
 
 Hard-refresh Jellyfin in your browser afterward.
+These commands assume Jellyfin is installed as a systemd service and the installer supports your Jellyfin Web layout.
 
+Hard-refresh Jellyfin in your browser afterward.
+
+The request page can also be accessed directly at:
 The request page can also be accessed directly at:
 
 ```text

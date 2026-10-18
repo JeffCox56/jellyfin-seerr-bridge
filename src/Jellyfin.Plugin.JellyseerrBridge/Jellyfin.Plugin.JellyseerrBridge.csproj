@@ -4,6 +4,7 @@
     <AssemblyName>Jellyfin.Plugin.JellyseerrBridge</AssemblyName>
     <RootNamespace>Jellyfin.Plugin.JellyseerrBridge</RootNamespace>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <Version>0.1.0.7</Version>
   </PropertyGroup>
 
   <ItemGroup>
