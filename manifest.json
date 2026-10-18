@@ -5,16 +5,12 @@
         "description": "A Jellyfin plugin that provides a Jellyseerr-powered request page with server-side API-key forwarding.",
         "versions": [
             {
-                "url": "https://github.com/JeffCox56/jellyfin-seerr-bridge/releases/download/v0.1.6/JellyseerrBridge_0.1.0.7.zip",
+                "url": "https://github.com/JeffCox56/jellyfin-seerr-bridge/releases/download/v0.1.7/JellyseerrBridge_0.1.0.7.zip",
                 "checksum": "6955ff179c3977a9bb51eb466e948bd5",
                 "version": "0.1.0.7",
                 "repositoryUrl": "https://raw.githubusercontent.com/JeffCox56/jellyfin-seerr-bridge/main/manifest.json",
                 "timestamp": "2026-10-18T05:30:00Z",
-<<<<<<< HEAD
-                "sourceUrl": "https://github.com/JeffCox56/jellyfin-seerr-bridge/releases/download/v0.1.6/JellyseerrBridge_0.1.0.7.zip",
-=======
-                "sourceUrl": "https://github.com/JeffCox56/jellyfin-seerr-bridge/releases/download/v0.1.6/JellyseerrBridge_0.1.0.6.zip",
->>>>>>> origin/main
+                "sourceUrl": "https://github.com/JeffCox56/jellyfin-seerr-bridge/releases/download/v0.1.7/JellyseerrBridge_0.1.0.7.zip",
                 "repositoryName": "Jellyseerr Bridge",
                 "targetAbi": "12.2.0.0",
                 "changelog": "Updates compatibility to Jellyfin 12.2 using .NET 10. Updates build, packaging, and manifest generation for ABI 12.2.0.0."
