@@ -13,7 +13,7 @@
                 "sourceUrl": "https://github.com/JeffCox56/jellyfin-seerr-bridge/releases/download/v0.1.7/JellyseerrBridge_0.1.0.7.zip",
                 "repositoryName": "Jellyseerr Bridge",
                 "targetAbi": "12.2.0.0",
-                "changelog": "Updates compatibility to Jellyfin 12.2 using .NET 10. Updates build, packaging, and manifest generation for ABI 12.2.0.0."
+                "changelog": "Added Jellyfin 12.2 React navigation support. Fixed the request tab not appearing in the active jellyfin web interface."
             }
         ],
         "category": "General",
