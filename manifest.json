@@ -10,7 +10,7 @@
                 "version": "0.1.0.7",
                 "repositoryUrl": "https://raw.githubusercontent.com/JeffCox56/jellyfin-seerr-bridge/main/manifest.json",
                 "timestamp": "2026-10-18T05:30:00Z",
-                "sourceUrl": "https://github.com/JeffCox56/jellyfin-seerr-bridge",
+                "sourceUrl": "https://github.com/JeffCox56/jellyfin-seerr-bridge/releases/download/v0.1.6/JellyseerrBridge_0.1.0.7.zip",
                 "repositoryName": "Jellyseerr Bridge",
                 "targetAbi": "12.2.0.0",
                 "changelog": "Updates compatibility to Jellyfin 12.2 using .NET 10. Updates build, packaging, and manifest generation for ABI 12.2.0.0."

@@ -1,113 +1,124 @@
-# seerr Bridge for Jellyfin
+# Seerr Bridge for Jellyfin
 
-seerr Bridge adds a Jellyseerr-powered request page to Jellyfin without exposing the Jellyseerr API key to browsers.
+A Jellyfin 12.2-compatible fork of [Jellyseerr Bridge](https://github.com/monjaka/jellyfin-plugin-seerr-bridge), originally developed by [monjaka](https://github.com/monjaka).
 
-<img width="1117" height="283" alt="2026-06-14_22-46_1" src="https://github.com/user-attachments/assets/2d508176-25dd-4d94-9e12-2fc7458b2387" />
-<img width="1488" height="641" alt="2026-06-14_22-45" src="https://github.com/user-attachments/assets/7ff5b1f4-e7d5-47b2-804d-bf067ac31f5c" />
+Seerr Bridge adds a Jellyseerr/Seerr-powered request page directly to Jellyfin without exposing the Seerr API key to browsers.
 
+**Compatibility:** Jellyfin 12.2.x, .NET 10  
+**Current release:** 0.1.0.7  
+**Status:** Experimental — initial Jellyfin 12.2 compatibility release.
 
-## Standard Install
+## Screenshots
 
-1. In Jellyfin, open Dashboard -> Plugins -> Repositories.
-2. Add this repository:
+<img width="1117" height="283" alt="Jellyfin request navigation" src="https://github.com/user-attachments/assets/2d508176-25dd-4d94-9e12-2fc7458b2387" />
 
-   ```text
-   Name: Jellyseerr Bridge
-   URL: https://raw.githubusercontent.com/monjaka/jellyfin-plugin-jellyseerr-bridge/main/manifest.json
-   ```
+<img width="1488" height="641" alt="Media request page" src="https://github.com/user-attachments/assets/7ff5b1f4-e7d5-47b2-804d-bf067ac31f5c" />
 
-3. Open Dashboard -> Plugins -> Catalog.
-4. Install `Jellyseerr Bridge`.
-5. Restart Jellyfin.
-6. Open Dashboard -> Plugins -> Jellyseerr Bridge and configure:
+## Installation
 
-   - seerr Base URL
-   - seerr API Key
-   - Enable Request Submission
-<img width="904" height="649" alt="image" src="https://github.com/user-attachments/assets/da23e483-1528-4bf4-b687-522db8ae9114" />
+### 1. Add the plugin repository
 
-7. Install the Jellyfin Web navigation button:
+In Jellyfin, navigate to **Dashboard → Plugins → Repositories**.
 
-   ```bash
-   curl -fsSLO https://raw.githubusercontent.com/monjaka/jellyfin-plugin-jellyseerr-bridge/main/scripts/install-web-loader.sh
-   sudo bash install-web-loader.sh
-   sudo systemctl restart jellyfin
-   ```
+Add the following repository:
 
-8. Hard refresh Jellyfin in your browser.
+```text
+Name: Seerr Bridge (JeffCox56)
+URL: https://raw.githubusercontent.com/JeffCox56/jellyfin-seerr-bridge/main/manifest.json
+```
 
-The request page is also available directly:
+### 2. Install the plugin
+
+1. Navigate to **Dashboard → Plugins → Catalog**.
+2. Find **Jellyseerr Bridge**.
+3. Install version `0.1.0.7` or newer.
+4. Restart Jellyfin.
+
+### 3. Configure Seerr
+
+Navigate to **Dashboard → Plugins → Jellyseerr Bridge**.
+
+Configure:
+
+- **Seerr Base URL:** The URL Jellyfin uses to reach your Seerr instance.
+- **Seerr API Key:** Your Seerr API key.
+- **Enable Request Submission:** Enable this to allow media requests.
+
+<img width="904" height="649" alt="Plugin configuration" src="https://github.com/user-attachments/assets/da23e483-1528-4bf4-b687-522db8ae9114" />
+
+### 4. Install the Jellyfin Web navigation button
+
+The plugin uses a separate web-loader installation step to add the **Request** navigation button to Jellyfin Web.
+
+On the Jellyfin server:
+
+```bash
+curl -fsSLO https://raw.githubusercontent.com/JeffCox56/jellyfin-seerr-bridge/main/scripts/install-web-loader.sh
+
+# Review the downloaded script before running it
+less install-web-loader.sh
+
+sudo bash install-web-loader.sh
+sudo systemctl restart jellyfin
+```
+
+These commands assume Jellyfin is installed as a systemd service and the installer supports your Jellyfin Web layout.
+
+Hard-refresh Jellyfin in your browser afterward.
+
+The request page can also be accessed directly at:
 
 ```text
 https://your-jellyfin-domain/JellyseerrBridge/Page
 ```
 
+**Note:** The web-loader integration is still being validated against Jellyfin 12.2. Installing the plugin does not automatically guarantee the Request navigation button will appear.
+
 ## Updating After Jellyfin Updates
 
-Jellyfin updates can replace Jellyfin Web's `index.html`. If the `Request` menu item disappears, rerun:
+Jellyfin updates may replace or modify Jellyfin Web's `index.html`, removing the custom navigation entry.
+
+If the Request button disappears, rerun:
 
 ```bash
-curl -fsSLO https://raw.githubusercontent.com/monjaka/jellyfin-plugin-jellyseerr-bridge/main/scripts/install-web-loader.sh
+curl -fsSLO https://raw.githubusercontent.com/JeffCox56/jellyfin-seerr-bridge/main/scripts/install-web-loader.sh
+
 sudo bash install-web-loader.sh
 sudo systemctl restart jellyfin
 ```
 
+Then hard-refresh your browser.
+
 ## Uninstall
 
-Remove the Jellyfin Web navigation button:
+First, remove the Jellyfin Web navigation integration:
 
 ```bash
-curl -fsSLO https://raw.githubusercontent.com/monjaka/jellyfin-plugin-jellyseerr-bridge/main/scripts/uninstall-web-loader.sh
+curl -fsSLO https://raw.githubusercontent.com/JeffCox56/jellyfin-seerr-bridge/main/scripts/uninstall-web-loader.sh
+
 less uninstall-web-loader.sh
+
 sudo bash uninstall-web-loader.sh
 sudo systemctl restart jellyfin
 ```
 
-Then uninstall `Jellyseerr Bridge` from Dashboard -> Plugins.
+Then uninstall **Jellyseerr Bridge** from **Dashboard → Plugins**.
 
 ## Features
 
-- Jellyfin-hosted request page for search, discovery categories, and media requests.
-- Movie and series detail views, including per-season request buttons for series.
-- Discovery filters for rating, release date, and major streaming providers.
+- Jellyfin-hosted request page for searching, discovering, and requesting media.
+- Movie and television series detail views, including per-season request buttons.
+- Discovery filters for ratings, release dates, and major streaming providers.
 - Sorting by release date, title, and rating.
-- Jellyseerr-provided availability and request status drives request buttons.
-- Server-side forwarding to Jellyseerr using a configured Jellyseerr URL and API key.
-- Narrow request API that validates input instead of acting as an open proxy.
-- Plugin-served Jellyfin Web entry script for a `Request` tab and side-menu `Requests` entry.
+- Seerr-provided availability and request status.
+- Server-side API requests using a configured Seerr URL and API key.
+- Validated request endpoints rather than an unrestricted API proxy.
+- Jellyfin Web integration providing a Request tab and Requests side-menu entry.
 
 ## Security Model
 
-The Jellyseerr API key is stored only in Jellyfin's plugin configuration and is used server-side by the plugin.
+The Seerr API key is stored in Jellyfin's plugin configuration and used exclusively by the plugin's server-side integration.
 
-Browsers call Jellyfin plugin endpoints. They never receive the Jellyseerr API key.
+Browsers communicate with Jellyfin plugin endpoints rather than directly receiving the Seerr API key.
 
-Request submission is disabled by default. An administrator must explicitly enable it in plugin configuration.
-
-The request endpoint accepts only:
-
-- `mediaType`: `movie` or `tv`
-- `mediaId`: TMDB ID
-- `is4k`: optional boolean
-- `seasons`: optional `"all"` or a list of season numbers for TV
-
-It does not forward arbitrary request bodies to Jellyseerr.
-
-## Build From Source
-
-This branch targets Jellyfin 12.2 and requires the .NET 10 SDK. Earlier Jellyfin versions require the previous plugin build.
-
-Install the .NET 10 SDK, then:
-
-```bash
-dotnet restore
-dotnet build -c Release
-```
-
-The plugin DLL will be under:
-
-```text
-src/Jellyfin.Plugin.JellyseerrBridge/bin/Release/
-```
-
-For more detail, see [INSTALL.md](INSTALL.md), [WEB_LOADER.md](WEB_LOADER.md), and [RELEASE.md](RELEASE.md).
+Request submission is disabled by default and must be explicitly

@@ -186,9 +186,45 @@
     }
   }
 
+  function insertReactRequestTab() {
+    const header = document.querySelector("header.MuiAppBar-root");
+    if (!header || !header.getClientRects().length) return;
+
+    const favorites = Array.from(
+      header.querySelectorAll('a[href*="tab=1"]')
+    ).find(el => el.textContent.trim() === "Favorites");
+
+    if (!favorites) return;
+
+    const container = favorites.parentElement;
+
+    // Avoid duplicate Request buttons.
+    const existing = container.querySelector(
+      '[data-jellyseerr-bridge="react-request-tab"]'
+    );
+
+    if (existing) return;
+
+    const request = document.createElement("a");
+
+    // Match the existing Jellyfin navigation styling.
+    request.className = favorites.className;
+    request.textContent = "Request";
+    request.href = REQUEST_URL;
+    request.setAttribute(
+      "data-jellyseerr-bridge",
+      "react-request-tab"
+    );
+
+    request.addEventListener("click", openRequestPage, true);
+
+    favorites.insertAdjacentElement("afterend", request);
+  }
+
   function insertEntries() {
     insertTopTab();
     insertSideMenuItem();
+    insertReactRequestTab();
   }
 
   insertEntries();
